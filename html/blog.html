@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Blogs | SheVolunteers</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      color: #333;
+      background-color: #fff;
+      line-height: 1.6;
+    }
+
+    /* HEADER */
+    header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      background-color: white;
+      padding: 10px 40px;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+      position: sticky;
+      top: 0;
+      z-index: 100;
+    }
+
+    .logo img {
+      width: 200px;
+      height: auto;
+    }
+
+    nav ul {
+      list-style: none;
+      display: flex;
+      gap: 30px;
+      margin: 0;
+      padding: 0;
+    }
+
+    nav ul li a {
+      text-decoration: none;
+      color: #333;
+      font-weight: 600;
+    }
+
+    nav ul li a:hover {
+      color: #E07BAE;
+    }
+
+    /* BLOG TITEL */
+    h1.blog-heading {
+      font-size: 48px;
+      font-weight: 700;
+      margin: 80px auto 60px;
+      text-align: left;
+      width: 85%;
+      max-width: 1200px;
+    }
+
+    /* BLOG-GRID */
+    .blog-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+      gap: 80px;
+      width: 85%;
+      max-width: 1200px;
+      margin: 0 auto 120px;
+    }
+
+    .blog-card {
+      display: flex;
+      flex-direction: column;
+      text-decoration: none;
+      color: inherit;
+      transition: opacity 0.3s ease;
+    }
+
+    .blog-card:hover {
+      opacity: 0.8;
+    }
+
+    .blog-card img {
+      width: 100%;
+      height: 280px;
+      object-fit: cover;
+      background-color: #eee;
+      border-radius: 4px;
+    }
+
+    .blog-info {
+      margin-top: 14px;
+    }
+
+    .blog-category {
+      font-size: 12px;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      color: #444;
+      margin-bottom: 6px;
+    }
+
+    .blog-title {
+      font-size: 20px;
+      font-weight: 600;
+      line-height: 1.4;
+    }
+
+    /* FOOTER */
+    footer {
+      background-color: #f9f9f9;
+      padding: 60px 100px 30px;
+      color: #333;
+      border-top: 1px solid #eee;
+    }
+
+    .footer-container {
+      display: grid;
+      grid-template-columns: 1.2fr 1fr 1fr 1fr;
+      gap: 40px;
+      align-items: start;
+    }
+
+    .footer-logo img {
+      width: 180px;
+      height: auto;
+    }
+
+    .footer-column h4 {
+      font-size: 18px;
+      margin-bottom: 15px;
+      font-weight: 700;
+      color: #333;
+    }
+
+    .footer-column ul {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+    }
+
+    .footer-column ul li {
+      margin-bottom: 8px;
+    }
+
+    .footer-column ul li a {
+      text-decoration: none;
+      color: #E07BAE;
+      font-weight: 500;
+      font-size: 16px;
+      transition: color 0.3s;
+    }
+
+    .footer-column ul li a:hover {
+      color: #b8528d;
+    }
+
+    .footer-bottom {
+      border-top: 1px solid #ddd;
+      margin-top: 40px;
+      padding-top: 20px;
+      text-align: center;
+      font-size: 14px;
+      color: #777;
+    }
+
+    @media (max-width: 768px) {
+      h1.blog-heading {
+        font-size: 36px;
+      }
+      .footer-container {
+        grid-template-columns: 1fr 1fr;
+        gap: 30px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- HEADER -->
+  <header>
+    <div class="logo">
+      <a href="index.html"><img src="bilder/shevolunteers-logo.jpg" alt="SheVolunteers Logo"></a>
+    </div>
+    <nav>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="überuns.html">Über uns</a></li>
+        <li><a href="ehrenamt.html">Engagement</a></li>
+        <li><a href="kontakt.html">Kontakt</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- BLOG BEREICH -->
+  <main>
+    <h1 class="blog-heading">Blog</h1>
+
+    <section class="blog-grid">
+      <a href="blog1.html" class="blog-card">
+        <img src="bilder/blog1.jpg" alt="Blogbeitrag 1">
+        <div class="blog-info">
+          <div class="blog-category">Blog</div>
+          <div class="blog-title">Kein Gym? Kein Problem! Mein Fitness-Geheimnis im Ausland</div>
+        </div>
+      </a>
+
+      <a href="blog2.html" class="blog-card">
+        <img src="bilder/blog2.jpg" alt="Blogbeitrag 2">
+        <div class="blog-info">
+          <div class="blog-category">Blog</div>
+          <div class="blog-title">Mein Auslandssemester am anderen Ende der Welt</div>
+        </div>
+      </a>
+
+      <a href="blog3.html" class="blog-card">
+        <img src="bilder/blog3.jpg" alt="Blogbeitrag 3">
+        <div class="blog-info">
+          <div class="blog-category">Blog</div>
+          <div class="blog-title">Lesetipp: Wie „Unverschämt“ mich auf mein Auslandsjahr vorbereitet hat</div>
+        </div>
+      </a>
+    </section>
+  </main>
+
+  <!-- FOOTER -->
+  <footer>
+    <div class="footer-container">
+      <div class="footer-logo">
+        <img src="bilder/LOGO.111.png" alt="SheVolunteers Logo">
+      </div>
+
+      <div class="footer-column">
+        <h4>Angebot</h4>
+        <ul>
+          <li><a href="blog.html">Blog</a></li>
+          <li><a href="whatsapp.html">WhatsApp</a></li>
+          <li><a href="https://www.instagram.com/shevolunteers.de" target="_blank">Instagram</a></li>
+          <li><a href="https://www.linkedin.com/company/she-volunteers-community/" target="_blank">LinkedIn</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-column">
+        <h4>SheVolunteers</h4>
+        <ul>
+          <li><a href="überuns.html">Über uns</a></li>
+          <li><a href="warumshevolunteers.html">Warum SheVolunteers?</a></li>
+          <li><a href="ehrenamt.html">Engagement</a></li>
+          <li><a href="kontakt.html">Kontakt</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-column">
+        <h4>Rechtliches</h4>
+        <ul>
+          <li><a href="impressum.html">Impressum</a></li>
+          <li><a href="datenschutzerklaerung.html">Datenschutzerklärung</a></li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <p>Website made with ♥ by SheVolunteers Team</p>
+      <p>© 2025 SheVolunteers. Alle Rechte vorbehalten.</p>
+    </div>
+  </footer>
+
+</body>
+</html>
+
+
+
