@@ -154,6 +154,7 @@
       transition: all 0.3s ease;
       margin-top: 50px;
       text-align: center;
+      border: 2px solid transparent;
     }
 
     a.button:hover {
@@ -164,11 +165,13 @@
 
     .button .arrow {
       margin-left: 10px;
-      transition: margin-left 0.3s ease;
+      transition: transform 0.3s ease, fill 0.3s ease;
+      fill: white;
     }
 
     a.button:hover .arrow {
-      margin-left: 18px;
+      transform: translateX(6px);
+      fill: #E07BAE; /* Pfeil wird rosa sichtbar auf weißem Hintergrund */
     }
 
     /* BILD UNTEN */
@@ -332,9 +335,13 @@
       </div>
     </div>
 
+    <!-- BUTTON MIT DYNAMISCHER PFEILFARBE -->
     <div style="text-align:center;">
       <a href="kontakt.html" class="button">
-        Werde Teil der Community <span class="arrow">→</span>
+        Werde Teil der Community
+        <svg class="arrow" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24">
+          <path d="M9.29 6.71a1 1 0 0 1 1.42 0L16 12l-5.29 5.29a1 1 0 1 1-1.42-1.42L13.17 12 9.29 8.12a1 1 0 0 1 0-1.41z"/>
+        </svg>
       </a>
     </div>
 
@@ -383,6 +390,7 @@
   </footer>
 </body>
 </html>
+
 
 
 
