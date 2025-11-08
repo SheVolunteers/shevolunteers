@@ -1,0 +1,362 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Blogs | SheVolunteers</title>
+
+  <link rel="icon" href="bilder/favicon.png" type="image/png">
+  <link rel="apple-touch-icon" href="bilder/favicon.png">
+  <meta property="og:image" content="https://www.shevolunteers.org/bilder/favicon.png">
+  <meta property="og:title" content="SheVolunteers – Frauen stärken Frauen">
+  <meta property="og:description" content="Eine Community von Frauen, die sich gegenseitig inspirieren und unterstützen.">
+
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      color: #333;
+      background-color: #fff;
+      line-height: 1.6;
+    }
+
+    /* HEADER */
+    header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      background-color: white;
+      padding: 10px 40px;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+      position: sticky;
+      top: 0;
+      z-index: 100;
+    }
+
+    .logo img {
+      width: 200px;
+      height: auto;
+    }
+
+    nav ul {
+      list-style: none;
+      display: flex;
+      gap: 30px;
+      margin: 0;
+      padding: 0;
+    }
+
+    nav ul li a {
+      text-decoration: none;
+      color: #333;
+      font-weight: 600;
+    }
+
+    nav ul li a:hover {
+      color: #E07BAE;
+    }
+
+    /* BLOG TITEL */
+    h1.blog-heading {
+      font-size: 48px;
+      font-weight: 700;
+      margin: 80px auto 20px;
+      text-align: left;
+      width: 85%;
+      max-width: 1200px;
+    }
+
+    /* SUCHLEISTE */
+    .search-container {
+      width: 85%;
+      max-width: 1200px;
+      margin: 0 auto 60px;
+      display: flex;
+      align-items: center;
+      background-color: #f3f4f5;
+      border-radius: 50px;
+      padding: 12px 20px;
+      box-sizing: border-box;
+    }
+
+    .search-container svg {
+      width: 22px;
+      height: 22px;
+      margin-right: 10px;
+      flex-shrink: 0;
+      opacity: 0.5;
+    }
+
+    .search-container input {
+      width: 100%;
+      border: none;
+      background: transparent;
+      font-size: 16px;
+      outline: none;
+      color: #333;
+    }
+
+    .search-container input::placeholder {
+      color: #888;
+    }
+
+    /* BLOG-GRID */
+    .blog-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+      gap: 80px;
+       row-gap: 50px;    /* vertikaler Abstand zwischen den Reihen */
+      width: 85%;
+      max-width: 1200px;
+      margin: 0 auto 120px;
+    }
+
+    .blog-card {
+      display: flex;
+      flex-direction: column;
+      text-decoration: none;
+      color: inherit;
+      transition: opacity 0.3s ease;
+    }
+
+    .blog-card:hover {
+      opacity: 0.8;
+    }
+
+    .blog-card img {
+      width: 100%;
+      height: 280px;
+      object-fit: cover;
+      background-color: #eee;
+      border-radius: 4px;
+    }
+
+    .blog-info {
+      margin-top: 14px;
+    }
+
+    .blog-category {
+      font-size: 12px;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      color: #444;
+      margin-bottom: 6px;
+    }
+
+    .blog-title {
+      font-size: 20px;
+      font-weight: 600;
+      line-height: 1.4;
+    }
+
+    /* FOOTER */
+    footer {
+      background-color: #f9f9f9;
+      padding: 60px 100px 30px;
+      color: #333;
+      border-top: 1px solid #eee;
+    }
+
+    .footer-container {
+      display: grid;
+      grid-template-columns: 1.2fr 1fr 1fr 1fr;
+      gap: 40px;
+      align-items: start;
+    }
+
+    .footer-logo img {
+      width: 180px;
+      height: auto;
+    }
+
+    .footer-column h4 {
+      font-size: 18px;
+      margin-bottom: 15px;
+      font-weight: 700;
+      color: #333;
+    }
+
+    .footer-column ul {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+    }
+
+    .footer-column ul li {
+      margin-bottom: 8px;
+    }
+
+    .footer-column ul li a {
+      text-decoration: none;
+      color: #E07BAE;
+      font-weight: 500;
+      font-size: 16px;
+      transition: color 0.3s;
+    }
+
+    .footer-column ul li a:hover {
+      color: #b8528d;
+    }
+
+    .footer-bottom {
+      border-top: 1px solid #ddd;
+      margin-top: 40px;
+      padding-top: 20px;
+      text-align: center;
+      font-size: 14px;
+      color: #777;
+    }
+
+    @media (max-width: 768px) {
+      h1.blog-heading {
+        font-size: 36px;
+      }
+      .footer-container {
+        grid-template-columns: 1fr 1fr;
+        gap: 30px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- HEADER -->
+  <header>
+    <div class="logo">
+      <a href="index.html"><img src="bilder/LOGO.111.png" alt="SheVolunteers Logo"></a>
+    </div>
+    <nav>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="überuns.html">Über uns</a></li>
+        <li><a href="ehrenamt.html">Engagement</a></li>
+        <li><a href="kontakt.html">Kontakt</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- BLOG BEREICH -->
+  <main>
+    <h1 class="blog-heading">Blog</h1>
+
+    <!-- SUCHLEISTE -->
+    <div class="search-container">
+      <!-- Suchsymbol (SVG) -->
+      <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+        <circle cx="11" cy="11" r="8" />
+        <line x1="21" y1="21" x2="16.65" y2="16.65" />
+      </svg>
+      <input type="text" id="blogSearch" placeholder="Suche..." onkeyup="searchBlogs()">
+    </div>
+
+    <section class="blog-grid" id="blogGrid">
+      <a href="blog1.html" class="blog-card">
+        <img src="bilder/blog1.jpg" alt="Blogbeitrag 1">
+        <div class="blog-info">
+          <div class="blog-category">Blog</div>
+          <div class="blog-title">Kein Gym? Kein Problem! Mein Fitness-Geheimnis im Ausland</div>
+        </div>
+      </a>
+
+      <a href="blog2.html" class="blog-card">
+        <img src="bilder/blog2.jpg" alt="Blogbeitrag 2">
+        <div class="blog-info">
+          <div class="blog-category">Blog</div>
+          <div class="blog-title">Mein Auslandssemester am anderen Ende der Welt</div>
+        </div>
+      </a>
+
+      <a href="blog3.html" class="blog-card">
+        <img src="bilder/blog3.jpg" alt="Blogbeitrag 3">
+        <div class="blog-info">
+          <div class="blog-category">Blog</div>
+          <div class="blog-title">Lesetipp: Wie „Unverschämt“ mich auf mein Auslandsjahr vorbereitet hat</div>
+        </div>
+      </a>
+
+      <a href="blog4.html" class="blog-card">
+        <img src="bilder/blog4.jpg" alt="Blogbeitrag 4">
+        <div class="blog-info">
+          <div class="blog-category">Blog</div>
+          <div class="blog-title">POV: Du hast eine Blasenentzündung in Norwegen</div>
+        </div>
+      </a>
+
+      <a href="blog5.html" class="blog-card">
+        <img src="bilder/blog5.jpg" alt="Blogbeitrag 5">
+        <div class="blog-info">
+          <div class="blog-category">Blog</div>
+          <div class="blog-title">Von Deutschland nach Äthiopien: mit Let Me Be A Child e.V.</div>
+        </div>
+      </a>
+
+      <a href="blog6.html" class="blog-card">
+        <img src="bilder/blog6.jpg" alt="Blogbeitrag 6">
+        <div class="blog-info">
+          <div class="blog-category">Blog</div>
+          <div class="blog-title">Zwischen Lockdown und FSJ– Mein Jahr in Amsterdam</div>
+        </div>
+      </a>
+    </section>
+  </main>
+
+  <!-- FOOTER -->
+  <footer>
+    <div class="footer-container">
+      <div class="footer-logo">
+        <img src="bilder/LOGO.111.png" alt="SheVolunteers Logo">
+      </div>
+
+      <div class="footer-column">
+        <h4>Angebot</h4>
+        <ul>
+          <li><a href="blog.html">Blog</a></li>
+          <li><a href="whatsapp.html">WhatsApp</a></li>
+          <li><a href="https://www.instagram.com/shevolunteers.de" target="_blank">Instagram</a></li>
+          <li><a href="https://www.linkedin.com/company/she-volunteers-community/" target="_blank">LinkedIn</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-column">
+        <h4>SheVolunteers</h4>
+        <ul>
+          <li><a href="überuns.html">Über uns</a></li>
+          <li><a href="warumshevolunteers.html">Warum SheVolunteers?</a></li>
+          <li><a href="ehrenamt.html">Engagement</a></li>
+          <li><a href="kontakt.html">Kontakt</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-column">
+        <h4>Rechtliches</h4>
+        <ul>
+          <li><a href="impressum.html">Impressum</a></li>
+          <li><a href="datenschutzerklaerung.html">Datenschutzerklärung</a></li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <p>Website made with ♥ by SheVolunteers Team</p>
+      <p>© 2025 SheVolunteers. Alle Rechte vorbehalten.</p>
+    </div>
+  </footer>
+
+  <script>
+    function searchBlogs() {
+      const input = document.getElementById('blogSearch').value.toLowerCase();
+      const blogs = document.querySelectorAll('.blog-card');
+      blogs.forEach(blog => {
+        const title = blog.querySelector('.blog-title').textContent.toLowerCase();
+        blog.style.display = title.includes(input) ? '' : 'none';
+      });
+    }
+  </script>
+
+</body>
+</html>
+
+
+
+
