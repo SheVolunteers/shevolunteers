@@ -25,7 +25,7 @@
       justify-content: space-between;
       align-items: center;
       background-color: white;
-      padding: 6px 30px;
+      padding: 10px 40px;
       box-shadow: 0 2px 5px rgba(0,0,0,0.1);
       position: sticky;
       top: 0;
@@ -78,9 +78,7 @@
       z-index: 1;
     }
 
-    .hero h1,
-    .hero p,
-    .hero a {
+    .hero h1, .hero p, .hero a {
       position: relative;
       z-index: 2;
     }
@@ -131,9 +129,7 @@
       fill: #E07BAE;
     }
 
-    /* ------------------------
-       TESTIMONIAL- / COMMUNITY-BEREICH
-    ------------------------ */
+    /* --- COMMUNITY / TESTIMONIAL --- */
     .community-section {
       background-color: #fdf8fa;
       padding: 80px 20px;
@@ -193,8 +189,14 @@
     }
 
     @keyframes slideIn {
-      from { opacity: 0; transform: translateY(8px); }
-      to { opacity: 1; transform: translateY(0); }
+      from {
+        opacity: 0;
+        transform: translateY(8px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
     }
 
     .testimonial-top {
@@ -255,7 +257,7 @@
       background: #E07BAE;
     }
 
-    /* --- SOCIAL MEDIA SEKTION --- */
+    /* --- SOCIAL MEDIA --- */
     .social-section {
       text-align: center;
       padding: 60px 20px 50px;
@@ -358,20 +360,34 @@
 
     /* --- MOBILE --- */
     @media (max-width: 900px) {
-      .hero { padding: 110px 20px; }
-      .testimonial-card { padding: 24px; }
-      .testimonial-wrapper { padding: 0 12px; }
+      .hero {
+        padding: 110px 20px;
+      }
+      .testimonial-card {
+        padding: 24px;
+      }
+      .testimonial-wrapper {
+        padding: 0 12px;
+      }
     }
 
     @media (max-width: 700px) {
-      .testimonial-wrapper { flex-direction: column; gap: 12px; }
-      .arrow-btn { font-size: 28px; }
-      .testimonial-card { width: 100%; max-width: 100%; }
+      .testimonial-wrapper {
+        flex-direction: column;
+        gap: 12px;
+      }
+      .arrow-btn {
+        font-size: 28px;
+      }
+      .testimonial-card {
+        width: 100%;
+        max-width: 100%;
+      }
     }
   </style>
 </head>
-<body>
 
+<body>
   <!-- HEADER -->
   <header>
     <div class="logo">
@@ -387,20 +403,6 @@
     </nav>
   </header>
 
-  <!-- HERO -->
-  <section class="hero">
-    <h1>Willkommen bei SheVolunteers</h1>
-    <p>Eine Community von Frauen, die Frauen weltweit auf ihrem Weg ins Ausland begleiten, unterstützen und inspirieren.</p>
-    <a href="kontakt.html" class="button">
-      Werde Teil der Community
-      <svg class="arrow" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24">
-        <path d="M9.29 6.71a1 1 0 0 1 1.42 0L16 12l-5.29 5.29a1 1 0 1 1-1.42-1.42L13.17 12 9.29 8.12a1 1 0 0 1 0-1.41z"/>
-      </svg>
-    </a>
-  </section>
-
-  <!-- COMMUNITY / TESTIMONIAL-SLIDER -->
-  ... (Rest deines Codes mit Testimonials, Social Section, Footer und Script folgt unverändert hier)
 
 
 
