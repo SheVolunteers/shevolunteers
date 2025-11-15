@@ -484,34 +484,28 @@
   display: grid;
   grid-template-columns: 1fr 1fr; /* 2 Spalten */
   gap: 20px 30px;
-  margin: 20px 0;
+  margin: 20px 0 40px; /* Abstand unten größer, Platz für Button */
 }
 
 .modal-button {
-  display: flex;               /* wie action-button */
+  display: flex; /* wie action-button */
   align-items: center;
-  justify-content: space-between;       
-  padding: 25px 30px;                 /* gleiche Größe wie die Buttons */
-  background-color: #ffffff;          /* weißer Hintergrund */
-  color: #333;                        /* Schriftfarbe wie bei action-buttons */
+  justify-content: space-between;
+  padding: 25px 30px; /* gleiche Größe wie die Buttons */
+  background-color: #ffffff; /* weißer Hintergrund */
+  color: #333; /* Schriftfarbe wie bei action-buttons */
   border: 1px solid #ddd;
-  border-radius: 8px;                 /* gleiche Rundung */
+  border-radius: 8px; /* gleiche Rundung */
   font-size: 1.2rem;
   font-weight: 500;
   text-decoration: none;
   transition: all 0.2s ease-in-out;
 }
+
 .modal-button:hover {
   background-color: #f0f0f0;
   transform: translateY(-2px);
   box-shadow: 0 2px 6px rgba(0,0,0,0.1);
-}
-
-.modal-text-grid {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 20px 30px;
-  margin: 20px 0 40px; /* Abstand unten größer, Platz für Button */
 }
 
 .modal-close {
@@ -521,6 +515,7 @@
   font-size: 28px;
   cursor: pointer;
 }
+
   </style>
 </head>
 
@@ -556,7 +551,7 @@
 <section class="action-banner">
   <h2>Worauf hast du jetzt Lust?</h2>
   <div class="button-grid">
-   <a href="/#" class="modal-button" data-modal="modal-stories">Stories entdecken <svg class="arrow" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"> <line x1="2" y1="0" x2="14" y2="12"></line> <line x1="2" y1="24" x2="14" y2="12"></line> </svg> </a>
+   <a href="/#" class="action-button" data-modal="modal-stories">Stories entdecken <svg class="arrow" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"> <line x1="2" y1="0" x2="14" y2="12"></line> <line x1="2" y1="24" x2="14" y2="12"></line> </svg> </a>
    <a href="/#" class="action-button" data-modal="modal-podcast">Podcast hören <svg class="arrow" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"> <line x1="2" y1="0" x2="14" y2="12"></line> <line x1="2" y1="24" x2="14" y2="12"></line> </svg> </a>
    <a href="/#" class="action-button" data-modal="modal-teilen">Deine Story teilen <svg class="arrow" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"> <line x1="2" y1="0" x2="14" y2="12"></line> <line x1="2" y1="24" x2="14" y2="12"></line> </svg> </a>
    <a href="/#" class="action-button" data-modal="modal-community">Zur Community <svg class="arrow" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"> <line x1="2" y1="0" x2="14" y2="12"></line> <line x1="2" y1="24" x2="14" y2="12"></line> </svg> </a>
@@ -564,19 +559,14 @@
    <a href="/#" class="action-button" data-modal="modal-socials">Mit uns connecten <svg class="arrow" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"> <line x1="2" y1="0" x2="14" y2="12"></line> <line x1="2" y1="24" x2="14" y2="12"></line> </svg> </a>
   </div>
 
- <!-- Modal für Stories -->
-<div id="modal-stories" class="modal">
+ <div id="modal-stories" class="modal">
   <div class="modal-content">
-    <h3>Stories & Tipps</h3>
-    <p class="modal-subtitle">Hier kannst du Inspirationen und Stories entdecken.</p>
-    <div class="modal-text-grid">
-      <p>Textabsatz 1</p>
-      <p>Textabsatz 2</p>
-      <p>Textabsatz 3</p>
-      <p>Textabsatz 4</p>
-    </div>
-    <a href="/stories" class="modal-button">Zu unseren Stories</a>
-    <span class="modal-close">&times;</span>
+    <span class="modal-close" onclick="closeModal()">&times;</span>
+
+    <h2 class="modal-title">Stories entdecken</h2>
+    <p class="modal-text">Hier kannst du inspirierende Auslandserfahrungen entdecken.</p>
+
+    <a href="/stories" class="modal-button">Jetzt ansehen</a>
   </div>
 </div>
 </section>
